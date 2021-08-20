@@ -1,0 +1,27 @@
+name: assignment
+
+on: [push]
+
+jobs:
+	build:
+		runs-on: ubuntu-latest
+
+		steps:
+		#run 뒤에는 실제 작동하는 코드를 넣어야 함
+		-uses: action/checkout@v2
+
+		-name: name.py 출력
+		run: 	|
+			python name.py
+
+		-name: pip 업그레이드
+		run:	|
+			python -m pip install —upgrade pip
+
+		-name: 필요한 패키지 인스톨
+		run:	|
+			pip install -r requirements.txt
+
+		-name: 파이썬 실행
+		run:	|
+			python test.py
