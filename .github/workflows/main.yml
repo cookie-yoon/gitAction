@@ -1,12 +1,13 @@
-name: helloGithubAction 
+name: helloGithubAction
 
 on: [push]
 
-jobs: 
-  build: 
-    runs-on: ubuntu-latest 
-
-    steps: 
-  
-    - name: Print name.py 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: 1. name.py 출력
       run: python name.py
