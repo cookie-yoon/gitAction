@@ -9,6 +9,4 @@ jobs:
     steps: 
   
     - name: Print name.py 
-      run:  python name.py
-    - name: 디렉토리 출력 
-      run: ls -al
+      run: python name.py
