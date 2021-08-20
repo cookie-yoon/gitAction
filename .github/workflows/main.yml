@@ -8,7 +8,6 @@ jobs:
     
     steps:
     #run 뒤에는 실제 작동하는 코드를 넣어야 함
-    - uses: action/checkout@v2
     
     - name: name.py 출력
       run: 	|
